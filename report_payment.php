@@ -1,5 +1,6 @@
-<?php include('header.php'); ?>
-<?php include('session.php'); ?>
+<?php include('header.php'); 
+include("dbcon.php");
+ $con = conectar() ?>
     <body >
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
@@ -10,19 +11,19 @@
                         <!-- block -->
                         <div  id="block_bg" class="block">
 						<?php
-							$query= mysql_query("select * from students where status != 'exempted'")or die(mysql_error());
-							$count = mysql_num_rows($query);
+							$query= mysqli_query($con,"select * from students where status != 'exempted'")or die(mysqli_error());
+							$count = mysqli_num_rows($query);
 						 	
 						?>
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left"><i class="icon-reorder icon-large"></i> Students List</div>
+                                <div class="muted pull-left"><i class="icon-reorder icon-large"></i> Lista de Estudiantes</div>
                                 <div class="muted pull-right">
-									Number of Students: <span class="badge badge-info"><?php  echo $count;  ?></span>
+									Numero de estudiantes: <span class="badge badge-info"><?php  echo $count;  ?></span>
 								</div>
                             </div>
                             <div class="block-content collapse in">
 								<div class="span12" id="studentTableDiv">
-								<h2 id="noch">Students List</h2>
+								<h2 id="noch">Lista de estudiantes</h2>
 									<?php include('report_payment_table.php'); ?>
                                 </div>
                             </div>

@@ -8,7 +8,7 @@
 						
 						<li><a href="fees.php"><i class="icon-chevron-right icon-large"></i><i class="icon-money icon-large"></i> Pagos</a></li>
 						<li><a href="payment_report.php"><i class="icon-chevron-right icon-large"></i><i class="icon-table icon-large"></i> Reporte de pagos</a></li>
-						<li><a ><i class="icon-chevron-right icon-large"></i><i class="icon-file icon-large"></i> Reportes</a></li>
+						<li><a href="report_payment.php"><i class="icon-chevron-right icon-large"></i><i class="icon-file icon-large"></i> Reportes</a></li>
                     </ul>
 	</center>
             </div>

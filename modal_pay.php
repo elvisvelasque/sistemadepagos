@@ -14,7 +14,7 @@
 					<p>NOMBRE DE CLASE: <strong><?php echo $myclass; ?></strong></p>
 					<input type="hidden" name="student_id" value="<?php echo $stud_id;?>"/>
 					<p>PENSION: <strong><?php echo $fee; ?></strong></p>
-					<p>STADO DEL ESTUDIANTE: <strong><?php echo $status; ?></strong></p>
+					<p>ESTADO DEL ESTUDIANTE: <strong><?php echo $status; ?></strong></p>
 					<p>ESTADO DE PAGO: <strong><?php echo $status_fee; ?></strong></p>
 					<input type="hidden" name="status_fee" value="<?php echo $status_fee;?>"/>
 					<p>Period: <strong>
