@@ -193,18 +193,40 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(1, 'Form 6', 'Secondary', 250000);
+(1, '1RO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(2, '2DO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(3, '3RO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(4, '4TO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(5, '5TO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(6, '6TO PRIM', 'PRIMARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(7, '1RO SEC', 'SECUNDARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(8, '2DO SEC', 'SECUNDARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(9, '3RO SEC', 'SECUNDARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(10, '4TO SEC', 'SECUNDARIA', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(11, '5TO SEC', 'SECUNDARIA', 250);
+
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `janmar`
--
-
--- --------------------------------------------------------
-
---
--- Table structure for table `julsep`
 --
 -- Table structure for table `payment_made`
 --
@@ -222,7 +244,19 @@ CREATE TABLE `payment_made` (
 -- Dumping data for table `payment_made`
 
 -- --------------------------------------------------------
+-- Creando tablas maestras
+CREATE TABLE `TODO_PAGOS` (
+  `todo_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `month` varchar(50) NOT NULL,
+  `estado` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `ULTIMO_DIA_MES` (
+  `udm_id` int(11) NOT NULL,
+  `month` int(11) NOT NULL,
+  `ultimo_dia` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Table structure for table `students`
 --
@@ -251,12 +285,51 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `address`, `class`, `gfirstname`, `gmiddlename`, `glastname`, `rship`, `tel`, `status`, `transport`, `route`) VALUES
-(1, 'aaa', 'bbb', 'cvvv', 'Male', '2016-10-25', 'bububu', 'Form 6', 'oplkk', 'jjj', 'rfrf', 'father', '0789554433', 'half', 'yes', 'kijichi'),
-(2, 'buel', 'bol', 'buel', 'Female', '2016-10-26', 'stonetown', 'Form 6', 'bun', 'bol', 'buel', 'mother', '0717884452', 'paying', 'no', '');
+(2, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi'),
+(3, 'JUANITA', 'MARIA', 'SALAZAR GOMEZ', 'Femenino', '2000-10-25', 'Mz A2 Lt 15', '2dO PRIM', 'RITA', 'FRIDA', 'TRUJILLO PEREZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi');
 
 -- --------------------------------------------------------
+insert into `marzo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
 
---
+insert into `abril` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `mayo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `junio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `julio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `agosto` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `setiembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `octubre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `noviembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+insert into `diciembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(2,'1RO PRIM','250','paying','250','0'),
+(3,'2DO PRIM','250','paying','250','0');
+
+
 -- Table structure for table `users`
 --
 
@@ -312,11 +385,10 @@ ALTER TABLE `activity_log`
   ADD PRIMARY KEY (`activity_log_id`);
 
 --
--- Indexes for table `aprjun`
+-- Indexes for month table 
 --
 ALTER TABLE `enero`
   ADD PRIMARY KEY (`enero_id`);
-
 ALTER TABLE `febrero`
   ADD PRIMARY KEY (`febrero_id`);
 ALTER TABLE `marzo`

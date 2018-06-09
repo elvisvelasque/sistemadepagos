@@ -8,15 +8,7 @@ $st_period = $_POST['period'];
 $st_receipt=$_POST['receipt'];
 
 
-if($st_period=='janmar'){
-	$my_period ='janmar';
-}elseif($st_period=='aprjun'){
-	$my_period ='aprjun';
-}elseif($st_period=='julsep'){
-	$my_period ='julsep';
-}elseif($st_period=='octdec'){
-	$my_period ='octdec';
-}elseif($st_period=='marzo'){
+if($st_period=='marzo'){
 	$my_period ='marzo';
 }elseif($st_period=='abril'){
 	$my_period ='abril';
@@ -38,8 +30,8 @@ if($st_period=='janmar'){
 	$my_period ='diciembre';
 }
 
-mysqli_query($con,"update $my_period set fee='$st_fee' where student_id='$st_id'")or die(mysql_error()); 
-mysqli_query($con,"insert into payment_made(student_id,period,amount,date_of_payment,receipt) values('$st_id','$st_period','$st_fee',NOW(),'$st_receipt')")or die(mysql_error());
+mysqli_query($con,"update $my_period set fee='$st_fee' where student_id='$st_id'")or die(mysqli_error()); 
+mysqli_query($con,"insert into payment_made(student_id,period,amount,date_of_payment,receipt) values('$st_id','$st_period','$st_fee',NOW(),'$st_receipt')")or die(mysqli_error());
 
 
 ?>

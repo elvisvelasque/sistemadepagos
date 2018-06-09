@@ -27,7 +27,18 @@
 		</thead>
 		<tbody>
 		<?php
-		$query2 = mysqli_query($con,"select * from students,enero,febrero,marzo,abril,mayo,junio,julio,agosto,setiembre,octubre,noviembre,diciembre where students.status != 'exempted' AND students.student_id=enero.student_id AND students.student_id=febrero.student_id AND students.student_id=marzo.student_id AND students.student_id=mayo.student_id AND students.student_id=junio.student_id AND students.student_id=julio.student_id AND students.student_id=agosto.student_id AND students.student_id=setiembre.student_id AND students.student_id=octubre.student_id AND students.student_id=noviembre.student_id AND students.student_id=diciembre.student_id   ")or die(mysqli_error());
+		$query2 = mysqli_query($con,"select * from students 
+inner join marzo on students.student_id=marzo.student_id
+inner join abril on students.student_id=abril.student_id
+inner join junio on students.student_id=junio.student_id
+inner join julio on students.student_id=julio.student_id
+inner join agosto on students.student_id=agosto.student_id
+inner join setiembre on students.student_id=setiembre.student_id
+inner join octubre on students.student_id=octubre.student_id
+inner join noviembre on students.student_id=noviembre.student_id
+inner join diciembre on students.student_id=diciembre.student_id
+where students.status != 'exempted'
+order by  students.student_id ")or die(mysqli_error());
 		while($row2= mysqli_fetch_array($query2)){
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];
 		$stud_id =$row2['student_id'];
