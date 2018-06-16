@@ -26,7 +26,7 @@
 		$status =$row2['status']; 
 		$myclass =$row2['class'];
 		
-		$query3 = mysqli_query($con,"select * from class where class_name='$myclass' ")or die(mysql_error());
+		$query3 = mysqli_query($con,"select * from class where class_name in ('$myclass') ")or die(mysql_error());
 		while($row3= mysqli_fetch_array($query3)){
 		$fee = $row3['fee'];
 		}		

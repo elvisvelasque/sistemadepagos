@@ -58,4 +58,18 @@
 		mysqli_query($con,"insert into octubre (student_id,class,class_fee,status,status_fee,fee) values('$student_id','$student_class','$myfee','$status','$status_fee','0')")or die (mysqli_error());
 		mysqli_query($con,"insert into noviembre (student_id,class,class_fee,status,status_fee,fee) values('$student_id', '$student_class','$myfee','$status','$status_fee','0')")or die (mysqli_error());
 		mysqli_query($con,"insert into diciembre (student_id,class,class_fee,status,status_fee,fee) values('$student_id','$student_class','$myfee','$status','$status_fee','0')")or die (mysqli_error());
+
+		mysqli_query($con,"insert into TODO_PAGOS (student_id,month,estado) values
+			('$student_id','marzo','1'),
+			('$student_id','abril','1'),
+			('$student_id','mayo','1'),
+			('$student_id','junio','1'),
+			('$student_id','julio','1'),
+			('$student_id','agosto','1'),
+			('$student_id','setiembre','1'),
+			('$student_id','octubre','1'),
+			('$student_id','noviembre','1'),
+			('$student_id','diciembre','1')
+			")or die (mysqli_error());
+
 		?>

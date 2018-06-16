@@ -17,21 +17,19 @@
 					<p>ESTADO DEL ESTUDIANTE: <strong><?php echo $status; ?></strong></p>
 					<p>ESTADO DE PAGO: <strong><?php echo $status_fee; ?></strong></p>
 					<input type="hidden" name="status_fee" value="<?php echo $status_fee;?>"/>
-					<p>Period: <strong>
-						<select name ="period" required>
-						<option ></option>
-						<option value ="marzo">Marzo </option>
-						<option value ="abril">Abril </option>
-						<option value ="mayo">Mayo </option>
-						<option value ="junio">Junio </option>
-						<option value ="julio">Julio </option>
-						<option value ="agosto">Agosto </option>
-						<option value ="setiembre">Setiembre </option>
-						<option value ="octubre">Octubre </option>
-						<option value ="noviembre">Noviembre </option>
-						<option value ="diciembre">Diciembre </option>
-						</select>
+					<p>Periodo: <strong>
+											<select name="period" class="span5" required>
+											<option></option>
+											<?php 
+											$result = mysqli_query($con,"select * from todo_pagos where student_id='$stud_id' and estado='1' ")or die(mysqli_error());
+											while($row = mysqli_fetch_array($result)){
+											$myperiod = $row['month'];			
+									?>
+								<option value="<?php echo $myperiod;?>"> <?php echo $myperiod;?> </option>
+									<?php }?>
+							</select>
 					</strong><hr></p>
+
 					<p>RECEIPT NO: <input type="text" name="receipt" required/></p>
 					</div>
 					</div>

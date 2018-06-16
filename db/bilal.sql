@@ -173,7 +173,7 @@ CREATE TABLE `diciembre` (
 
 --
 -- Dumping data for table `aprjun`
---
+
 
 -- --------------------------------------------------------
 
@@ -251,6 +251,30 @@ CREATE TABLE `TODO_PAGOS` (
   `month` varchar(50) NOT NULL,
   `estado` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `TODO_PAGOS` (`todo_id`, `student_id`, `month`, `estado`) VALUES
+(1, 1, 'marzo', '1'),
+(2, 1, 'abril', '1'),
+(3, 1, 'mayo', '1'),
+(4, 1, 'junio', '1'),
+(5, 1, 'julio', '1'),
+(6, 1, 'agosto', '1'),
+(7, 1, 'setiembre', '1'),
+(8, 1, 'octubre', '1'),
+(9, 1, 'noviembre', '1'),
+(10, 2, 'diciembre', '1'),
+(11, 2, 'marzo', '1'),
+(12, 2, 'abril', '1'),
+(13, 2, 'mayo', '1'),
+(14, 2, 'junio', '1'),
+(15, 2, 'julio', '1'),
+(16, 2, 'agosto', '1'),
+(17, 2, 'setiembre', '1'),
+(18, 2, 'octubre', '1'),
+(19, 2, 'noviembre', '1'),
+(20, 2, 'diciembre', '1');
+
+
 
 CREATE TABLE `ULTIMO_DIA_MES` (
   `udm_id` int(11) NOT NULL,
@@ -403,10 +427,18 @@ ALTER TABLE `users`
 ALTER TABLE `user_log`
   ADD PRIMARY KEY (`user_log_id`);
 
+ALTER TABLE `todo_pagos`
+  ADD PRIMARY KEY (`todo_id`);
+
+ALTER TABLE `ULTIMO_DIA_MES`
+  ADD PRIMARY KEY (`udm_id`);
+
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
+ALTER TABLE `todo_pagos`
+  MODIFY `todo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
 --
 -- AUTO_INCREMENT for table `activity_log`
 --
@@ -421,7 +453,7 @@ ALTER TABLE `enero`
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `febrero`
-  MODIFY `febrero_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `febrero_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `janmar`
 --
@@ -476,6 +508,7 @@ ALTER TABLE `user_log`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+--
 insert into `marzo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
 (1,'1RO PRIM','250','paying','250','0'),
 (2,'2DO PRIM','250','paying','250','0');
