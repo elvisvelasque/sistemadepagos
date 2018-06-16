@@ -244,7 +244,7 @@ CREATE TABLE `payment_made` (
 -- Dumping data for table `payment_made`
 
 -- --------------------------------------------------------
--- Creando tablas maestras
+-- Creando tablas
 CREATE TABLE `TODO_PAGOS` (
   `todo_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
@@ -285,49 +285,10 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `address`, `class`, `gfirstname`, `gmiddlename`, `glastname`, `rship`, `tel`, `status`, `transport`, `route`) VALUES
-(2, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi'),
-(3, 'JUANITA', 'MARIA', 'SALAZAR GOMEZ', 'Femenino', '2000-10-25', 'Mz A2 Lt 15', '2dO PRIM', 'RITA', 'FRIDA', 'TRUJILLO PEREZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi');
+(1, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi'),
+(2, 'JUANITA', 'MARIA', 'SALAZAR GOMEZ', 'Femenino', '2000-10-25', 'Mz A2 Lt 15', '2dO PRIM', 'RITA', 'FRIDA', 'TRUJILLO PEREZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi');
 
--- --------------------------------------------------------
-insert into `marzo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `abril` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `mayo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `junio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `julio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `agosto` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `setiembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `octubre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `noviembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
-
-insert into `diciembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
-(2,'1RO PRIM','250','paying','250','0'),
-(3,'2DO PRIM','250','paying','250','0');
+-- -------------------------------------------------------
 
 
 -- Table structure for table `users`
@@ -514,3 +475,43 @@ ALTER TABLE `user_log`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+insert into `marzo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `abril` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `mayo` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `junio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `julio` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `agosto` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `setiembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `octubre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `noviembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
+
+insert into `diciembre` (`student_id`,`class`,`class_fee`,`status`,`status_fee`,`fee`) values
+(1,'1RO PRIM','250','paying','250','0'),
+(2,'2DO PRIM','250','paying','250','0');
