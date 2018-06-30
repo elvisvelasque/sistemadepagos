@@ -11,7 +11,7 @@ include("dbcon.php");
                         <!-- block -->
                         <div  id="block_bg" class="block">
 						<?php
-							$query= mysqli_query($con,"select * from students where status != 'exempted'")or die(mysqli_error());
+							$query= mysqli_query($con,"select * from students where status != 'exempted' and student_id != 1")or die(mysqli_error());
 							$count = mysqli_num_rows($query);
 						 	
 						?>

@@ -4,6 +4,7 @@
 ?>
 
     <body >
+        <?php include('navbar.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('sidebar_fees.php'); ?>

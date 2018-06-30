@@ -278,9 +278,21 @@ INSERT INTO `TODO_PAGOS` (`todo_id`, `student_id`, `month`, `estado`) VALUES
 
 CREATE TABLE `ULTIMO_DIA_MES` (
   `udm_id` int(11) NOT NULL,
-  `month` int(11) NOT NULL,
+  `month` varchar(50) NOT NULL,
   `ultimo_dia` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `ULTIMO_DIA_MES` (`udm_id`, `month`, `ultimo_dia`) VALUES
+(1,'marzo', '2018-03-31'),
+(2,'abril', '2018-04-30'),
+(3,'mayo', '2018-05-31'),
+(4,'junio', '2018-06-30'),
+(5,'julio', '2018-07-31'),
+(6,'agosto', '2018-08-31'),
+(7, 'setiembre', '2018-09-30'),
+(8,'octubre', '2018-10-31'),
+(9,'noviembre', '2018-11-30'),
+(10,'diciembre', '2018-12-31');
 --
 -- Table structure for table `students`
 --
@@ -309,7 +321,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `address`, `class`, `gfirstname`, `gmiddlename`, `glastname`, `rship`, `tel`, `status`, `transport`, `route`) VALUES
-(1, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi'),
+(1, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'exempted', 'no', 'kijichi'),
 (2, 'JUANITA', 'MARIA', 'SALAZAR GOMEZ', 'Femenino', '2000-10-25', 'Mz A2 Lt 15', '2dO PRIM', 'RITA', 'FRIDA', 'TRUJILLO PEREZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi');
 
 -- -------------------------------------------------------

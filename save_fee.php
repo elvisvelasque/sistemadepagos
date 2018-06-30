@@ -30,9 +30,21 @@ if($st_period=='marzo'){
 	$my_period ='diciembre';
 }
 
-mysqli_query($con,"update $my_period set fee='$st_fee' where student_id='$st_id'")or die(mysqli_error()); 
+mysqli_query($con,"update $my_period set fee=(
+	select case when DATEDIFF(CURDATE(),b.ultimo_dia)>0 then  DATEDIFF(CURDATE(),b.ultimo_dia)+'$st_fee'
+else 0+'$st_fee'
+end pago
+from ultimo_dia_mes b 
+where b.month='$my_period'
+) where student_id='$st_id'")or die(mysqli_error()); 
 mysqli_query($con,"update TODO_PAGOS set estado='0' where student_id='$st_id' and month='$my_period'")or die(mysqli_error()); 
-mysqli_query($con,"insert into payment_made(student_id,period,amount,date_of_payment,receipt) values('$st_id','$st_period','$st_fee',NOW(),'$st_receipt')")or die(mysqli_error());
+mysqli_query($con,"insert into payment_made(student_id,period,amount,date_of_payment,receipt) 
+select '$st_id','$st_period',case when DATEDIFF(CURDATE(),b.ultimo_dia)>0 then  DATEDIFF(CURDATE(),b.ultimo_dia)+'$st_fee'
+else 0+'$st_fee'
+end pago ,NOW(),'$st_receipt'
+from ultimo_dia_mes b 
+where b.month='$my_period'
+	")or die(mysqli_error());
 
 
 ?>

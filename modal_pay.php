@@ -21,11 +21,18 @@
 											<select name="period" class="span5" required>
 											<option></option>
 											<?php 
-											$result = mysqli_query($con,"select * from todo_pagos where student_id='$stud_id' and estado='1' ")or die(mysqli_error());
+											$result = mysqli_query($con,"select month, pago from(select a.month, case when DATEDIFF(CURDATE(),b.ultimo_dia)>0 then  DATEDIFF(CURDATE(),b.ultimo_dia)+'$status_fee'
+												else '$status_fee'+0
+												end pago from todo_pagos a
+												inner join ultimo_dia_mes b 
+												on a.month=b.month
+												where student_id='$stud_id' and estado='1') a")or die(mysqli_error());
 											while($row = mysqli_fetch_array($result)){
-											$myperiod = $row['month'];			
+											$myperiod = $row['month'];
+											$mypago = $row['pago'];			
+			
 									?>
-								<option value="<?php echo $myperiod;?>"> <?php echo $myperiod;?> </option>
+								<option value="<?php echo $myperiod;?>"> <?php echo $myperiod;?> <?php echo $mypago;?></option>
 									<?php }?>
 							</select>
 					</strong><hr></p>
