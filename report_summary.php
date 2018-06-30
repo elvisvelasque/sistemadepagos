@@ -152,9 +152,15 @@
 
                                     </div>
                                 </div>
+
+                                 <?php 
+                                $result10 = mysqli_query($con,'SELECT COUNT(*)*200 AS matric FROM students'); 
+                                $row10 =mysqli_fetch_assoc($result10); 
+                                $sum10 = $row10['matric'];
+                                ?>
 								
                                 <div class="span3">
-                                    <div class="chart" data-percent="<?php echo $sum+$sum1+$sum2+$sum3+$sum4+$sum5+$sum6+$sum7+$sum8+$sum9; ?>"><?php echo $sum+$sum1+$sum2+$sum3+$sum4+$sum5+$sum6+$sum7+$sum8+$sum9; ?></div>
+                                    <div class="chart" data-percent="<?php echo $sum+$sum1+$sum2+$sum3+$sum4+$sum5+$sum6+$sum7+$sum8+$sum9+$sum10; ?>"><?php echo $sum+$sum1+$sum2+$sum3+$sum4+$sum5+$sum6+$sum7+$sum8+$sum9+$sum10; ?></div>
                                     <div class="chart-bottom-heading"><strong>DINERO TOTAL</strong>
 
                                     </div>

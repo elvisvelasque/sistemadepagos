@@ -1,8 +1,8 @@
 <?php
 		include('dbcon.php');
 		$con = conectar();
-		$username = 'noel.titus';//$_POST['username'];
-		$password = '54321';//$_POST['password'];
+		$username = $_POST['username'];//'noel.titus';
+		$password = $_POST['password'];//'54321';
 		/* student */
 		$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 		$result = mysqli_query($con,$query)or die(mysqli_error());

@@ -345,7 +345,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `firstname`, `lastname`, `status`) VALUES
 (3, 'noel.titus', '54321', 'noel', 'titus', 'administrator'),
-(4, 'abdul.hemedy', '12345', 'abdul', 'hemedy', 'normal');
+(4, 'admin', 'admin123', 'admin', 'admin', 'administrator');
 
 -- --------------------------------------------------------
 
@@ -368,9 +368,7 @@ CREATE TABLE `user_log` (
 INSERT INTO `user_log` (`user_log_id`, `username`, `login_date`, `logout_date`, `user_id`) VALUES
 (1, 'noel.titus', '2016-10-24 09:10:07', '2016-10-24 09:23:20', 3),
 (2, 'noel.titus', '2016-10-24 09:11:10', '2016-10-24 09:23:20', 3),
-(3, 'noel.titus', '2016-10-24 09:23:04', '2016-10-24 09:23:20', 3),
-(4, 'abdul.hemedy', '2016-10-24 09:23:30', '2016-10-24 09:36:55', 4);
-
+(3, 'noel.titus', '2016-10-24 09:23:04', '2016-10-24 09:23:20', 3);
 --
 -- Indexes for dumped tables
 --
