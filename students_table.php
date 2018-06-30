@@ -9,6 +9,7 @@
 	<?php include('modal_delete.php'); ?>
 		<thead>
 		<tr>
+					<th>Nro</th>
 					<th>Nombre completo</th>
 					<th>Genero</th>
 					<th>Clase</th>
@@ -19,11 +20,16 @@
 		</thead>
 		<tbody>
 		<?php
-		$query = mysqli_query($con,"select * from students ")or die(mysqli_error());
+		$query = mysqli_query($con,"SELECT t.*, 
+       	@rownum := @rownum + 1 AS rank
+  		FROM students t, 
+       	(SELECT @rownum := 0) r
+        ")or die(mysqli_error());
 		while($row = mysqli_fetch_array( $query)){
 		$id = $row['student_id'];
 		?>
 		<tr>
+		<td><?php echo $row['rank']; ?></td> 
 		<td><?php echo $row['firstname'].' '.$row['middlename'].' '.$row['lastname'];?></td> 
 		<td><?php echo $row['gender']; ?></td> 
 		<td><?php echo $row['class']; ?></td> 

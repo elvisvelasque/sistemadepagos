@@ -193,6 +193,15 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(12, '3 INI', 'INICIAL', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(13, '4 INI', 'INICIAL', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
+(14, '5 INI', 'INICIAL', 250);
+
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
 (1, '1RO PRIM', 'PRIMARIA', 250);
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES

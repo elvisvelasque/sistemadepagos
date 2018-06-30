@@ -7,7 +7,8 @@
 	</div>
 <br><br>
 		<thead>
-		<tr>
+		<tr>		
+					<th>Nro</th>
 					<th>Alumno</th>
 					<th>Clase</th>
 					<th>Cuota</th>
@@ -19,8 +20,14 @@
 		</thead>
 		<tbody>
 		<?php
-		$query2 = mysqli_query($con,"select * from students where status != 'exempted' ")or die(mysql_error());
+		$query2 = mysqli_query($con,"
+		SELECT t.*, 
+       	@rownum := @rownum + 1 AS rank
+  		FROM students t, 
+       	(SELECT @rownum := 0) r
+       	where status != 'exempted' ")or die(mysql_error());
 		while($row2= mysqli_fetch_array($query2)){
+		$nro =$row2['rank'];
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];
 		$stud_id =$row2['student_id'];
 		$status =$row2['status']; 
@@ -45,6 +52,7 @@
 		
 		?>
 		<tr>
+		<td><?php echo $nro; ?></td> 
 		<td><?php echo $student_name; ?></td> 
 		<td><?php echo $myclass ; ?></td> 
 		<td><?php echo $fee; ?></td> 
