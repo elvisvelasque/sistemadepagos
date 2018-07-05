@@ -15,7 +15,7 @@
 						<?php
                             //include('dbcon.php');
                             //$con=conectar()
-							$query= mysqli_query($con,"select * from students where status != 'exempted'")or die(mysql_error());
+							$query= mysqli_query($con,"select * from students where status != 'exempted' and student_id != 1")or die(mysql_error());
 							$count = mysqli_num_rows($query);
 						 	
 						?>

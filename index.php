@@ -25,19 +25,19 @@
 															data: formData,
 															success: function(html){
 															 if (html == 'true_admin'){
-																$.jGrowl("Loading Please Wait......", { sticky: true });
-																$.jGrowl("Welcome to Delaroy Studios School System", { header: 'Access Granted' });
+																$.jGrowl("Cargando, espere......", { sticky: true });
+																$.jGrowl("Bienvenido al sistema de matricula", { header: 'Access Granted' });
 															var delay = 1000;
 																setTimeout(function(){ window.location = 'dashboard.php'  }, delay);  
 															}else
 															if (html == 'true_user'){
-																$.jGrowl("Loading Please Wait......", { sticky: true });
-																$.jGrowl("Welcome to Delaroy Studios School System", { header: 'Access Granted' });
+																$.jGrowl("Cargando, espere......", { sticky: true });
+																$.jGrowl("Bienvenido al sistema de matricula", { header: 'Access Granted' });
 															var delay = 1000;
 																setTimeout(function(){ window.location = 'normal/dashboard.php'  }, delay);  
 															}else
 															{
-															$.jGrowl("Please Check your username and Password", { header: 'Login Failed' });
+															$.jGrowl("Por favor verificar el Usuario y Contraseña", { header: 'Login Failed' });
 															}
 															}
 														});

@@ -13,7 +13,7 @@ include("dbcon.php");
                         <!-- block -->
                         <div  id="block_bg" class="block">
 						<?php
-							$query= mysqli_query($con,"select * from students")or die(mysqli_error());
+							$query= mysqli_query($con,"select * from students where student_id != 1")or die(mysqli_error());
 							$count = mysqli_num_rows($query);
 						 	
 						?>
