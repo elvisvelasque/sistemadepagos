@@ -194,13 +194,13 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
-(11, '3 INIC', 'INICIAL', 150,1);
+(12, '3 INIC', 'INICIAL', 150,1);
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
-(12, '4 INIC', 'INICIAL', 150,2);
+(13, '4 INIC', 'INICIAL', 150,2);
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
-(13, '5 INIC', 'INICIAL', 150,3);
+(14, '5 INIC', 'INICIAL', 150,3);
 
 INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
 (1, '1RO PRIM', 'PRIMARIA', 250,4);
