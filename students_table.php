@@ -24,6 +24,7 @@
        	@rownum := @rownum + 1 AS rank
   		FROM students t, 
        	(SELECT @rownum := 0) r
+       	 where student_id != 1
         ")or die(mysqli_error());
 		while($row = mysqli_fetch_array( $query)){
 		$id = $row['student_id'];

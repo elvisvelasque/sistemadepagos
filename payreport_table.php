@@ -23,7 +23,7 @@
 		<?php
 		
 		if($mycriteria=='paid'){
-		$query2 = mysqli_query($con,"select * from students,".$myperiod." where students.class ='$myclass' AND ".$myperiod.".student_id = students.student_id AND ".$myperiod.".fee != '0'")or die(mysqli_error());
+		$query2 = mysqli_query($con,"select * from students,".$myperiod." where students.class ='$myclass' AND ".$myperiod.".student_id = students.student_id AND ".$myperiod.".fee != '0' and students.student_id != 1")or die(mysqli_error());
 		while($row2= mysqli_fetch_array($query2)){
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];
 		$stud_id =$row2['student_id'];
@@ -61,7 +61,7 @@
 		<?php }?><?php 
 		}else
 		if($mycriteria=='not_paid'){
-		$query2 =mysqli_query($con,"select * from students,".$myperiod." where students.class ='$myclass' AND ".$myperiod.".student_id = students.student_id  AND ".$myperiod.".fee = '0'")or die(mysql_error());
+		$query2 =mysqli_query($con,"select * from students,".$myperiod." where students.class ='$myclass' AND ".$myperiod.".student_id = students.student_id  AND ".$myperiod.".fee = '0'  and students.student_id != 1")or die(mysql_error());
 		while($row2= mysqli_fetch_array($query2)){
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];
 		$stud_id =$row2['student_id'];

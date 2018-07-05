@@ -5,7 +5,6 @@
 	 <a href="#" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprimir Lista</a> 
 	 
 	</div>
-<br><br>
 		<thead>
 		<tr>		
 					<th>Nro</th>
@@ -24,8 +23,9 @@
 		SELECT t.*, 
        	@rownum := @rownum + 1 AS rank
   		FROM students t, 
-       	(SELECT @rownum := 0) r
-       	where status != 'exempted' ")or die(mysql_error());
+       	(SELECT @rownum := -1) r
+       	where status != 'exempted'
+       	")or die(mysql_error());
 		while($row2= mysqli_fetch_array($query2)){
 		$nro =$row2['rank'];
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];
@@ -33,7 +33,7 @@
 		$status =$row2['status']; 
 		$myclass =$row2['class'];
 		
-		$query3 = mysqli_query($con,"select * from class where class_name in ('$myclass') ")or die(mysql_error());
+		$query3 = mysqli_query($con,"select * from class where class_name in ('$myclass')")or die(mysql_error());
 		while($row3= mysqli_fetch_array($query3)){
 		$fee = $row3['fee'];
 		}		
@@ -51,7 +51,7 @@
 		}
 		
 		?>
-		<tr>
+		<tr style=" <?php if($stud_id==1){ echo 'display:none';}?> ">
 		<td><?php echo $nro; ?></td> 
 		<td><?php echo $student_name; ?></td> 
 		<td><?php echo $myclass ; ?></td> 

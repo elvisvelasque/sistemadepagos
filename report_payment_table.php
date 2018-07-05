@@ -37,7 +37,7 @@ inner join setiembre on students.student_id=setiembre.student_id
 inner join octubre on students.student_id=octubre.student_id
 inner join noviembre on students.student_id=noviembre.student_id
 inner join diciembre on students.student_id=diciembre.student_id
-where students.status != 'exempted'
+where students.status != 'exempted'  and students.student_id != 1
 order by  students.student_id ")or die(mysqli_error());
 		while($row2= mysqli_fetch_array($query2)){
 		$student_name = $row2['firstname'].' '.$row2['middlename'].' '.$row2['lastname'];

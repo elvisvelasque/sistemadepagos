@@ -33,11 +33,11 @@ include("dbcon.php");
 										<div class="control-group">
                                           <div class="controls">
 											
-										  <label>Class</label>
+										  <label>Clase</label>
 										  <select name="class"onchange="document.myform.formVar.value=this.value" required>
 										  <option></option>
 										  <?php 
-												$query = mysqli_query($con,"select * from class")or die(mysql_error());
+												$query = mysqli_query($con,"select * from class order by row")or die(mysql_error());
 												while($row =mysqli_fetch_array($query)){
 												$class_name = $row['class_name'];
 						

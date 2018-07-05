@@ -185,54 +185,55 @@ CREATE TABLE `class` (
   `class_id` int(11) NOT NULL,
   `class_name` varchar(30) NOT NULL,
   `category` varchar(30) NOT NULL,
-  `fee` int(20) NOT NULL
+  `fee` int(20) NOT NULL,
+  `row` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
 --
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(12, '3 INI', 'INICIAL', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(11, '3 INIC', 'INICIAL', 150,1);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(13, '4 INI', 'INICIAL', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(12, '4 INIC', 'INICIAL', 150,2);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(14, '5 INI', 'INICIAL', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(13, '5 INIC', 'INICIAL', 150,3);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(1, '1RO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(1, '1RO PRIM', 'PRIMARIA', 250,4);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(2, '2DO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(2, '2DO PRIM', 'PRIMARIA', 250,5);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(3, '3RO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(3, '3RO PRIM', 'PRIMARIA', 250,6);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(4, '4TO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(4, '4TO PRIM', 'PRIMARIA', 250,7);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(5, '5TO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(5, '5TO PRIM', 'PRIMARIA', 250,8);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(6, '6TO PRIM', 'PRIMARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(6, '6TO PRIM', 'PRIMARIA', 250,9);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(7, '1RO SEC', 'SECUNDARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(7, '1RO SEC', 'SECUNDARIA', 250,10);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(8, '2DO SEC', 'SECUNDARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(8, '2DO SEC', 'SECUNDARIA', 250,11);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(9, '3RO SEC', 'SECUNDARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(9, '3RO SEC', 'SECUNDARIA', 250,12);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(10, '4TO SEC', 'SECUNDARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(10, '4TO SEC', 'SECUNDARIA', 250,13);
 
-INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`) VALUES
-(11, '5TO SEC', 'SECUNDARIA', 250);
+INSERT INTO `class` (`class_id`, `class_name`, `category`, `fee`,`row`) VALUES
+(11, '5TO SEC', 'SECUNDARIA', 250,14);
 
 
 -- --------------------------------------------------------
@@ -271,7 +272,7 @@ INSERT INTO `TODO_PAGOS` (`todo_id`, `student_id`, `month`, `estado`) VALUES
 (7, 1, 'setiembre', '1'),
 (8, 1, 'octubre', '1'),
 (9, 1, 'noviembre', '1'),
-(10, 2, 'diciembre', '1'),
+(10, 1, 'diciembre', '1'),
 (11, 2, 'marzo', '1'),
 (12, 2, 'abril', '1'),
 (13, 2, 'mayo', '1'),
@@ -309,7 +310,7 @@ INSERT INTO `ULTIMO_DIA_MES` (`udm_id`, `month`, `ultimo_dia`) VALUES
 CREATE TABLE `students` (
   `student_id` int(11) NOT NULL,
   `firstname` varchar(30) NOT NULL,
-  `middlename` varchar(30) NOT NULL,
+  `middlename` varchar(30),
   `lastname` varchar(30) NOT NULL,
   `gender` varchar(15) NOT NULL,
   `dob` varchar(30) NOT NULL,
@@ -330,7 +331,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `address`, `class`, `gfirstname`, `gmiddlename`, `glastname`, `rship`, `tel`, `status`, `transport`, `route`) VALUES
-(1, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'exempted', 'no', 'kijichi'),
+(1, 'ALEX', 'FERNANDO', 'VELASQUE ESPINOZA', 'Masculino', '2001-10-25', 'Mz A2 Lt 16', '1RO PRIM', 'LUCIA', 'ROSA', 'PANDO JIMENEZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi'),
 (2, 'JUANITA', 'MARIA', 'SALAZAR GOMEZ', 'Femenino', '2000-10-25', 'Mz A2 Lt 15', '2dO PRIM', 'RITA', 'FRIDA', 'TRUJILLO PEREZ', 'MAMA', '0789554433', 'paying', 'no', 'kijichi');
 
 -- -------------------------------------------------------

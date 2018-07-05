@@ -34,11 +34,11 @@ include("dbcon.php");
 													<option value="quarter">Cuarto</option>
 												</select>
 											<label>PRIMER NOMBRE:</label>
-											<input type="text" class="input-block-level"  name="fname" placeholder="First Name" required>
+											<input type="text" class="input-block-level"  name="fname" placeholder="PRIMER NOMBRE" required>
 											<label>SEGUNDO NOMBRE:</label>
-											<input type="text" class="input-block-level"  name="mname"     placeholder="Middle Name"     required>
+											<input type="text" class="input-block-level"  name="mname"     placeholder="SEGUNDO NOMBRE" >
 											<label>APELLIDO:</label>
-											<input type="text" class="input-block-level"  name="lname"  placeholder="Last Name"  required>
+											<input type="text" class="input-block-level"  name="lname"  placeholder="APELLIDOS"  required>
 											<label>GENERO:</label>
 												<select name="gender" class="span5" required>
 													<option></option>
@@ -51,14 +51,14 @@ include("dbcon.php");
 						<div class="span4">
 											
 											<label>Fecha de nacimiento:</label>
-											<input type="date" class="input-block-level"  name="dob" placeholder="Date of Birth">
+											<input type="date" class="input-block-level"  name="dob" placeholder="FECHA DE NACIMIENTO">
 											<label>Direccion:</label>
-											<input type="text" Placeholder="Permanent Address" name="address" class="my_message" required>
+											<input type="text" Placeholder="Permanent Address" name="DIRECCIOM" class="my_message" required>
 											<label>Clase:</label>		
 											<select name="student_class" class="span5" required>
 											<option></option>
 											<?php 
-											$result = mysqli_query($con,"select * from class ")or die(mysqli_error());
+											$result = mysqli_query($con,"select * from class order by row")or die(mysqli_error());
 											while($row = mysqli_fetch_array($result)){
 											$myclass = $row['class_name'];			
 									?>
@@ -73,15 +73,15 @@ include("dbcon.php");
 						<div class="span4">
 									
 							<label>NOMBRE APODERADO:</label>
-							<input type="text" class="input-block-level"  name="gfname" placeholder="First Name" required>
+							<input type="text" class="input-block-level"  name="gfname" placeholder="PRIMER NOMBRE" required>
 							<label>SEGUNDO NOMBRE APODERADO:</label>
-							<input type="text" class="input-block-level"  name="gmname" placeholder="Middle Name" required>
+							<input type="text" class="input-block-level"  name="gmname" placeholder="SEGUNDO NOMBRE" >
 							<label>APELLIDO APODERADO:</label>
-							<input type="text" class="input-block-level"  name="glname" placeholder="Last Name" required>
+							<input type="text" class="input-block-level"  name="glname" placeholder="APELLIDOS" required>
 							<label>RELACION CON ESTUDIANTE:</label>
-							<input type="text" class="input-block-level"  name="rship" placeholder="Relationship To Student" required>
+							<input type="text" class="input-block-level"  name="rship" placeholder="RELACION" required>
 							<label>NUMERO TELEFONICO:</label>
-							<input type="text" class="input-block-level"  name="tel" placeholder="Telephone No" onkeydown='return(event.which >= 48 && event.which <= 57)
+							<input type="text" class="input-block-level"  name="tel" placeholder="TELEFONO" onkeydown='return(event.which >= 48 && event.which <= 57)
 											|| event.which ==8 || event.which == 46' maxlength ="10" required>
 						</div>
 						<!--end span 4 -->

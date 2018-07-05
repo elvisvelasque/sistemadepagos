@@ -154,7 +154,7 @@
                                 </div>
 
                                  <?php 
-                                $result10 = mysqli_query($con,'SELECT COUNT(*)*150 AS matric FROM students'); 
+                                $result10 = mysqli_query($con,'SELECT COUNT(*)*150 AS matric FROM students where student_id != 1'); 
                                 $row10 =mysqli_fetch_assoc($result10); 
                                 $sum10 = $row10['matric'];
                                 ?>

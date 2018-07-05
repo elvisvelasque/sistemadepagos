@@ -22,7 +22,7 @@ $con = conectar()?>
 							        <div class="span12">
 						
 									<?php 
-								$query_students = mysqli_query($con,"select * from students  ")or die(mysql_error());
+								$query_students = mysqli_query($con,"select * from students where student_id != 1 ")or die(mysql_error());
 								$count_students = mysqli_num_rows($query_students);
 								?>
 								
@@ -75,7 +75,7 @@ $con = conectar()?>
                                 </div>
                                 
                                 <?php 
-                                $result3 = mysqli_query($con,'SELECT count(*) AS juniosum FROM students where class="1RO PRIM"'); 
+                                $result3 = mysqli_query($con,'SELECT count(*) AS juniosum FROM students where class="1RO PRIM" and student_id != 1' ); 
                                 $row3 = mysqli_fetch_assoc($result3); 
                                 $sum3 = $row3['juniosum'];
                                 ?>
