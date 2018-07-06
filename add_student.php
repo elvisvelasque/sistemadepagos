@@ -53,7 +53,7 @@ include("dbcon.php");
 											<label>Fecha de nacimiento:</label>
 											<input type="date" class="input-block-level"  name="dob" placeholder="FECHA DE NACIMIENTO">
 											<label>Direccion:</label>
-											<input type="text" Placeholder="Permanent Address" name="DIRECCIOM" class="my_message" required>
+											<input type="text" Placeholder="DIRECCION" name="address" class="my_message" required>
 											<label>Clase:</label>		
 											<select name="student_class" class="span5" required>
 											<option></option>

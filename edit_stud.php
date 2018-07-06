@@ -27,10 +27,10 @@ include("dbcon.php");
 										<label>ESTADO DE PAGO:</label>
 											<select name="status" class="span5" required>
 													<option><?php echo $row['status']; ?></option>
-													<option value="paying">Paying</option>
-													<option value ="exempted">Exempted</option>
-													<option value="half">Half</option>
-													<option value="quarter">Quarter</option>
+													<option value="paying">Pagado</option>
+													<option value ="exempted">Exento</option>
+													<option value="half">Medio</option>
+													<option value="quarter">Cuarto</option>
 												</select>
 										<label>PRIMER NOMBRE:</label>
 											<input type="text" class="input-block-level"  name="fname" value="<?php echo $row['firstname']; ?>" required>
@@ -52,7 +52,7 @@ include("dbcon.php");
 							<label>Direccion:</label>
 									<input type="text" value="<?php echo $row['address']; ?>" name="address" class="my_message" required>
 							
-							<button class="btn btn-success" name="update"><i class="icon-save icon-large"></i> Update</button>
+							<button class="btn btn-success" name="update"><i class="icon-save icon-large"></i> Actualizar</button>
 						</div>
 						<!--end span 4 -->	
 						<!-- span 4 -->	

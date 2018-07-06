@@ -2,6 +2,6 @@
 <hr>
 
 		<footer>
-           <p>Todos los derechos reservados</p>
+           <p>Institución educativa</p>
         <footer>
 </center>

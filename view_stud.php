@@ -6,7 +6,7 @@ include("dbcon.php");
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('sidebar_dashboard.php'); ?>
+				<?php include('sidebar_dashboard2.php'); ?>
                 <div class="span9" id="">
                      <div class="row-fluid">
                         <!-- block -->

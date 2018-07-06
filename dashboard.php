@@ -35,7 +35,7 @@ $con = conectar()?>
 
                                     <?php 
                                 
-                                $result = mysqli_query($con,'SELECT count(*) AS marzosum FROM students where class IN ("3 INI")'); 
+                                $result = mysqli_query($con,'SELECT count(*) AS marzosum FROM students where class IN ("3 INIC")'); 
                                 $row = mysqli_fetch_assoc($result); 
                                 $sum = $row['marzosum'];
                                 
@@ -49,7 +49,7 @@ $con = conectar()?>
                                 </div>
                                 
                                 <?php 
-                                $result1 = mysqli_query($con,'SELECT count(*) AS abrilsum FROM students where class IN ("4 INI")'); 
+                                $result1 = mysqli_query($con,'SELECT count(*) AS abrilsum FROM students where class IN ("4 INIC")'); 
                                 $row1 = mysqli_fetch_assoc($result1); 
                                 $sum1 = $row1['abrilsum'];
                                 ?>
@@ -62,7 +62,7 @@ $con = conectar()?>
                                     </div>
                                 </div>
                                 <?php 
-                                $result2 = mysqli_query($con,'SELECT count(*) AS mayosum FROM students where class IN ("5 INI") '); 
+                                $result2 = mysqli_query($con,'SELECT count(*) AS mayosum FROM students where class IN ("5 INIC") '); 
                                 $row2 = mysqli_fetch_assoc($result2); 
                                 $sum2 = $row2['mayosum'];
                                 ?>

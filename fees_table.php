@@ -12,7 +12,7 @@
 					<th>Clase</th>
 					<th>Cuota</th>
 					<th>Estado</th>
-					<th>Cuaota a Pagar</th>
+					<th>Cuota a Pagar</th>
 				
 					<th class="empty"></th>
 		</tr>
